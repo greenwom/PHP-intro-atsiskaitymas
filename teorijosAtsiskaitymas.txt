@@ -1,0 +1,132 @@
+Atsakymus pateikite po klausimais. (Visi klausimai po 0.5 balo)
+
+1.	Parašykite 1 būdą, kaip įvykdyti (paleisti) PHP script'ą iš komandinės eilutės.
+Ats.: PHP -f failoPavadinimas.php
+
+2.	Kas privalo būtų PHP failo pirmoje eilurėje, kad PHP žinotų, jog tolesnės eilutės yra PHP kodas?
+
+Ats.: <?php
+
+3.	Kokiais simboliais gali prasidėti PHP kintamojo pavadinimas (po $)?
+
+Ats.: Kintamaisi turi prasidėti mažaja rade  (pvz $kintamasis, $kitasKintamasis).
+Pačiame kintamojo pavadinime gali būti naudojamos ir didžiosios raidės, skaičiai ir apatinis brūkšnelis, tačiau geriausias būdas: camel case.
+
+4.	Ar simbolis % gali būti naudojamas PHP kintamojo pavadinime?
+
+Ats.: Ne, simbolis % negali būti naudojamas PHP kintamojo pavadinime. Gali būti naudojamos raides, skaičiai ir ‚ _‘ apatinio brūkšnio simbolis, bet tai irgi nėra taip korektiška, kaip kitamasis  parašytas „ camel case“ būdu.
+
+5.	Parašykite multiline PHP komentaro pavyzdį.
+
+Ats.; /*
+                  Niekados, niekados, niekados
+                  Neišdygs iš š***** dobiliukas.
+                  Nors yra ten trąšos,
+                  Bet nėra ten šviesos.
+                  Niekados, niekados, niekados!"
+
+                 Niekados neprogramuosiu, aš niekados
+                   */
+
+6.	Parašykite bent 4 duomenų tipus, naudojamus PHp kalboje.
+
+Ats.: Skaliariniai : Integer - sveikieji pvz., 41 arba -41.
+                              Float: skaičiai su kableliu, pvz: 41,2 arba -41,2
+                              String: tekstinis formatas, pvz;  "Čia yra tekstas arba "41".
+                              Boolean: loginės reikšmės "true" arba "false"
+     Kompoziciniai: Array,
+                               Object.
+ NULL: yra specialus tipas, kuris reiškia, kad kintamasis neturi reikšmės.
+
+7.	Paminėkite pagrindinė enumeratyvaus masyvo (indexed array) požymį, kuriuo jis skiriasi nuo asociatyvaus masyvo.
+
+     Ats.: Kuomet kuriamas masyvas ir nėra nurodomi reikšmių raktai (keys), PHP tai padaro          automatiškai. Automatiškai priskiriamas raktas yra int tipo. Po jo einanti reikšmė gauna raktą n+1 ir t.t;
+
+8.	Turite kintamajį $someVariable = '15'. Pakeiskite jo tipą į 'int'.
+
+            Ats.: $varToInt = (int)$someVariable;
+
+9.	Kokia funkcija naudojama gauti masyvo narių skaičiui?
+
+Ats.: count()
+
+10.	Kas nutinka, kai badome sukurti masyvą, kuris turi kelis narius, kurių raktai (keys) sutampa?
+
+Ats.:  PHP masyvai yra dinaminiai ir jie automatiškai perrašo elementus, kurių raktai sutampa. Pridėjus elementą su jau egzistuojančiu raktu, jis bus pakeistas nauju elementu su tokiu pat raktu.
+
+11.	Parašykite multidimensinio masyvo pavyzdį.
+
+            Ats.:  $furniture = [
+                       "kitschen" => [
+                            [
+                                "name" => "table",
+                                "price" => 1200,
+                                "color" => "brown"
+                        ],
+                           [
+                               "name" => "chair",
+                                "price" => 220,
+                                "color" => "red"
+                       ]
+                    ],
+                     "bedroom" => [
+                            [
+                             "name" => "bed",
+                             "price" => 1900,
+                          "color" => "white"
+                      ],
+                     [
+                          "name" => "wardrobe",
+                          "price" => 2020,
+                          "color" => "brown"
+                      ]
+                    ];
+
+12.	Parašykite enumeryvaus masyvo pavyzdį.
+
+Ats.:  $students = ['Ilona', 'Aurimas', 'Ina', 'Ramūnas', 'Akvilė', 'Arvydas', 'Aušra'];
+
+13.	Koks operatorius yra naudojamas pridėti naują narį masyvui? Pateikite paprastą pavyzdį.
+
+Ats.:  ATS: $drinks = ['wine', 'champagne'];
+
+                   array_push ($drinks, 'cremant');
+
+                   var_dump ($drinks);
+array(3) {
+  [0]=>
+  string(4) "wine"
+  [1]=>
+  string(9) "champagne"
+  [2]=>
+  string(7) "cremant"
+}
+
+14.	Kokia funkcija naudojama panaikinti masyvo nariui?
+
+Ats.:  unset()
+
+15.	Kokia funkcija naudotumėte pašalinti nereikalingus simbolius nuo string tipo reikšmės pradžios ir pabaigos (pvz:. "-test-" -> "test")?
+
+Ats.:  trim()
+
+16.	Kas laikoma superglobaliame kintamajame $_POST?
+
+Ats.:   Skaitant duomenis, kurie ateina iš pateiktos formos, naudojame superglobal kintamąjį $_POST. Jis masyvo pavidalu saugo formos duomenis.
+
+17.	Kas laikoma superglobaliame kintamajame $_FILES?
+
+          Ats.:     $_FILES  per formą įkelti failai, šis masyvas turi keletą indeksų, kurie saugo    informaciją apie failą, pavyzdžiui:
+            name - failo vardas, kurį naudotojas pasirinko įkėlimui
+error - klaidos kodas, kuris gali būti naudojamas patikrinti, ar failo įkėlimas buvo sėkmingas
+
+18.	Git status komanda leidžia padaryti ką?
+
+Ats.: Git status leidžia patikrinti dabartinį Git repozitorijos būklę, ši komanda yra naudojama, kokie failai yra pakeisti, kokie yra nauji ir kokie yra paruošti tam, kad būtų pridėti arba commit'inti.
+
+19.	Git push komanda leidžia padaryti ką?
+Ats.:     Git push leidžia siųsti failo pakeitimus iš lokalios repozitorijos į nuotolinę.
+
+
+20.	Kas yra regex?
+Ats.: Regex - regular expressions -  yra specialus simbolių rinkinys, naudojamas aprašyti arba redaguoti tekstą (stringą). Jis yra naudojamas teksto apdorojimo programose, kaip reguliarios išraiškos paieškos, pakeitimo ir filtravimo įrankis. .
